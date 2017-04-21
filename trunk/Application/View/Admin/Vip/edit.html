@@ -1,0 +1,37 @@
+<?php
+include './Application/View/Admin/Index/head.html';
+include './Application/View/Admin/Index/menu.html';
+
+?>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>部门管理</title>
+</head>
+
+
+
+<body>
+    <div class="panel-heading">添加会员等级</div>
+    <form action="index.php?p=Admin&c=Vip&a=add" method="post">
+       <p> 会员等级名称：<input type="text" name="vip_name"> </p>
+       <p> 会员折扣：<input type="text" name="vip_zk"> </p>
+       <p> 等级条件(金额)：<input type="text" name="money"> </p>
+        <input type="submit" value="立即提交" style="text-align: center">
+
+    </form>
+
+    </div>
+
+
+
+</body>
+</html>
+
+
+<?php include './Application/View/Admin/Index/footer.html';?>
+

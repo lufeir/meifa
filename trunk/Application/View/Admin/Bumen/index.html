@@ -1,0 +1,71 @@
+<?php
+include './Application/View/Admin/Index/head.html';
+include './Application/View/Admin/Index/menu.html';
+
+?>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>部门管理</title>
+</head>
+    <!--<table border="1" cellpadding="0" cellspacing="0" width="50%">-->
+        <!--<a href="index.php?p=Admin&c=Bumen&a=add">添加部门</a>-->
+        <!--<tr>-->
+            <!--<th>ID</th>-->
+            <!--<th>部门名称</th>-->
+            <!--<th>操作</th>-->
+        <!--</tr>-->
+
+        <!--<?php foreach($rows as $row):?>-->
+        <!--<tr>-->
+            <!--<td><?php echo $row['id']?></td>-->
+            <!--<td><?php echo $row['name']?></td>-->
+            <!--<td><a href="index.php?p=Admin&c=Bumen&a=delete&id=<?php echo $row['id'];?>">删除</a> /-->
+                <!--<a href="index.php?p=Admin&c=Bumen&a=edit&id=<?php echo $row['id'];?>">修改</a></td>-->
+        <!--</tr>-->
+        <!--<?php endforeach;?>-->
+
+    <!--</table>-->
+
+
+<body>
+    <div class="panel-heading">部门管理</div>
+
+    <!-- Table -->
+    <table class="table">
+        <a href="index.php?p=Admin&c=Bumen&a=add" class="btn btn-primary ">添加部门</a>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>部门名称</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach($rows as $row):?>
+        <tr class="list-group-item-success">
+            <td><?php echo $row['id'];?></td>
+            <td><?php echo $row['name'];?></td>
+            <td><a href="index.php?p=Admin&c=Bumen&a=delete&id=<?php echo $row['id'];?>" class="btn btn-primary ">删除</a>
+                <a href="index.php?p=Admin&c=Bumen&a=edit&id=<?php echo $row['id'];?>" class="btn btn-primary ">修改</a>
+            </td>
+        </tr>
+        <?php endforeach;?>
+
+        </tbody>
+    </table>
+
+    </div>
+
+
+
+</body>
+</html>
+
+
+<?php include './Application/View/Admin/Index/footer.html';?>
+

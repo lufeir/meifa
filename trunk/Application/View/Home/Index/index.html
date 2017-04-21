@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link href="Public/Home/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (Bootstrap's JavaScript plugins) -->
+<script src="Public/Home/js/jquery.min.js"></script>
+<script src="Public/Home/js/bootstrap.min.js"></script>
+<!-- Custom Theme files -->
+<link href="Public/Home/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Fashion Hair Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.useso.com/css?family=Poiret+One|Lily+Script+One|Raleway:400,300,500,600,200,700' rel='stylesheet' type='text/css'>
+<!--webfont-->
+<!-- dropdown -->
+<script src="Public/Home/js/jquery.easydropdown.js"></script>
+<link href="Public/Home/css/nav.css" rel="stylesheet" type="text/css" media="all"/>
+<script src="Public/Home/js/modernizr.custom.js"></script>
+</head>
+<body>
+<div class="banner-bg" id="home">
+	  <div class="container">
+			 <div class="header">
+			     <div class="logo">
+						<a href="index.html"><h1>Fashion</h1><span>Change Your Hair Style<span></a>
+				</div>
+						 
+				  <div class="top-nav">										 
+						<label class="mobile_menu" for="mobile_menu">
+						<span>Menu</span>
+						</label>
+						<input id="mobile_menu" type="checkbox">
+					   <ul class="nav">
+						<li><a class="active" href="index.php?p=Admin&c=Login&a=login">管理员登录</a></li>
+						<li><a href="index.php?p=Admin&c=Login&a=login">会员登录</a></li>
+					  </ul>
+				 </div>
+				 <div class="clearfix"></div>
+				</div>
+					<div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider4">
+					<li>
+								<div class="banner-info">
+									<h3>Hair Extensions</h3>
+									<lable> </lable>
+									<p>Lorem Ipsum Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsumipsum dolor sit amet, consectetuer dolor sit.</p>
+								</div>
+							</li>
+							<li>
+								<div class="banner-info">
+								   <h3>Hair styles</h3>
+								   <lable> </lable>
+									<p>Lorem Ipsum Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsumipsum dolor sit amet, consectetuer dolor sit.</p>
+								</div>
+							</li>
+							<li>
+								<div class="banner-info">
+									<h3>Hair clips</h3>
+									<lable> </lable>
+									<p>Lorem Ipsum Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsumipsum dolor sit amet, consectetuer dolor sit.</p>
+								</div>								
+							</li>
+						</ul>
+					</div>
+					<!--banner-slide-->
+					<script src="Public/Home/js/responsiveslides.min.js"></script>
+				   <script>
+					// You can also use "$(window).load(function() {"
+					$(function () {
+					  // Slideshow 4
+					  $("#slider4").responsiveSlides({
+						auto: true,
+						pager: true,
+						nav: true,
+						speed: 500,
+						namespace: "callbacks",
+						before: function () {
+						  $('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+						  $('.events').append("<li>after event fired.</li>");
+						}
+					  });
+				
+					});
+				  </script>
+			 <!--//banner-slide-->
+		</div>
+	</div>
+<!--start-banner-bottom-->
+  <div class="banner-bottom-section">
+	<div class="container">
+		<div class="banner-bottom-info">
+			<?php  foreach($rows as $row):?>
+			<div class="col-md-3 b-grids">
+					<i class="s1"> </i>
+					 <div class="album-box">
+				   <h4><?php echo $row['title'];?></h4>
+				     <p><?php echo $row['content'];?></p>
+				 </div>
+			</div>
+            <?php endforeach;?>
+			<div class="clearfix"></div>
+		</div>
+     </div>
+    </div>
+				<div class="copyright">
+					<p>Copyright &copy; 2017.Company name All rights reserved.More Templates <a href="#" target="_blank" title="模板之家">源代码之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+				</div>
+
+</body>
+</html>

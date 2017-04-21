@@ -1,0 +1,41 @@
+<?php
+include './Application/View/Admin/Index/head.html';
+include './Application/View/Admin/Index/menu.html';
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加员工</title>
+</head>
+<body>
+<form action="index.php?p=Admin&c=Members&a=edit" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="<?php echo $data['member_id']?>">
+    <input type="hidden">
+    <p>用户名:<input type="text" name="username" value="<?php echo $data['username']; ?>"/></p>
+    <p>原密码：<input type="password" name="old_password" /></p>
+    <p>新密码:<input type="password" name="password" ></p>
+    <p>确认密码:<input type="password" name="repassword" ></p>
+    <p>姓名:<input type="text" name="realname" value="<?php echo $data['realname']; ?>"/></p>
+    <p>性别:<input type="text" name="sex" value="<?php echo $data['sex']; ?>" /></p>
+    <p>电话：<input type="text" name="telephone" value="<?php echo $data['telephone'];?>" /></p>
+    <!--<p>所属组：<input type="text" name="group_id" value="<?php echo $data['group_id'];?>" /></p>-->
+
+    <p>所属组：<select name="group_id">
+        <?php foreach($rows as $row):?>
+        <option value="<?php echo $row['id']?>" <?php echo $row['id']==$data['group_id'] ? 'selected' : '';?>><?php echo $row['name']?></option>
+        <?php endforeach;?>
+    </select>
+    </p>
+
+    <p>是否管理员：<input type="radio" name="is_admin" value="1" <?php  echo $data['is_admin']==1?'checked':'';  ?> />是
+        <input type="radio" name="is_admin" value="0" <?php  echo $data['is_admin']==0?'checked':'';  ?> />否
+    </p>
+    <p>头像：<input type="file" name="photo" /></p>
+    <p><input type="submit" value="提交" /></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<?php
+include  VIEW_PATH.'Admin/Index/head.html';
+include  VIEW_PATH.'Admin/Index/menu.html';
+?>
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ueditor demo</title>
+</head>
+
+<body>
+<form action="index.php?p=Admin&c=Article&a=add" method="post" enctype="multipart/form-data">
+<!-- 加载编辑器的容器 -->
+    <p>活动标题:<input type="text" name="title"></p>
+    <p>活动内容：</p>
+    <p>活动开始日期:<input type="date" name="start"></p>
+    <p>活动结束日期:<input type="date" name="end"></p>
+    <p>活动内容：</p>
+    <script id="container" name="content" type="text/plain">
+            这里写你的初始化内容
+        </script>
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="Public/Admin/utf8-php/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="Public/Admin/utf8-php/ueditor.all.js"></script>
+    <!-- 实例化编辑器 -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('container');
+
+    </script>
+    <input type="submit" value="提交">
+</form>
+</body>
+
+</html>
+<?php
+include  VIEW_PATH.'Admin/Index/footer.html';
+
+?>

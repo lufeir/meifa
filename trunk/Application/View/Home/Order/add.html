@@ -1,0 +1,38 @@
+<?php
+include  VIEW_PATH.'Admin/Index/head.html';
+include  VIEW_PATH.'Admin/Index/menu.html';
+?>
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ueditor demo</title>
+</head>
+
+<body>
+<form action="index.php?p=Home&c=Order&a=add" method="post" enctype="multipart/form-data">
+<!-- 加载编辑器的容器 -->
+    <p>电话:<input type="text" name="phone"></p>
+    <p>预约美发师
+        <select name="barber">
+            <?php foreach($members as $member):?>
+            <option value="<?php echo $member['realname'];?>"><?php echo $member['realname'];?></option>
+            <?php endforeach;?>
+        </select>
+    </p>
+    <p>姓名：<input type="text" name="realname"></p>
+    <p>备注：</p><textarea name="content"></textarea>
+    <p>活动开始日期:<input type="date" name="date"></p>
+
+
+
+    <input type="submit" value="提交">
+</form>
+</body>
+
+</html>
+<?php
+include  VIEW_PATH.'Admin/Index/footer.html';
+
+?>

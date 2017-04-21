@@ -1,0 +1,21 @@
+<?php
+include './Application/View/Admin/Index/head.html';
+include './Application/View/Admin/Index/menu.html';
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+    <body>
+        <form action="index.php?p=Admin&c=Bumen&a=edit" method="post">
+            <input type="hidden" value="<?php echo $row['id'];?>" name="id"/>
+            <p>部门名称：<input type="text" name="group" value="<?php echo $row['name'];?>"/></p>
+            <input type="submit" value="提交"/>
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<?php
+include  VIEW_PATH.'Admin/Index/head.html';
+include  VIEW_PATH.'Admin/Index/menu.html';
+?>
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ueditor demo</title>
+</head>
+
+<body>
+<form action="index.php?p=Home&c=Order&a=edit" method="post" enctype="multipart/form-data">
+
+    <p>电话:<input type="text" name="phone" value="<?php echo $row['phone'];?>"></p>
+    <p>预约美发师
+        <select name="barber">
+            <?php foreach($members as $member):?>
+            <?php if($row['barber']==$member['realname']){?>
+               <option value="<?php echo $member['realname'];?>" selected="selected"><?php echo $member['realname'];?></option>
+            <?php }?>
+            <option value="<?php echo $member['realname'];?>"><?php echo $member['realname'];?></option>
+            <?php endforeach;?>
+        </select>
+    </p>
+    <p>姓名：<input type="text" name="realname" value="<?php echo $row['realname'];?>"></p>
+    <p>备注：</p><textarea name="content" ><?php echo $row['content'];?></textarea>
+    <p>预约日期:<input type="date" name="date" value="<?php echo date('Y-m-d',$row['date']);?>"></p>
+
+
+
+    <input type="submit" value="提交">
+</form>
+</body>
+
+</html>
+<?php
+include  VIEW_PATH.'Admin/Index/footer.html';
+
+?>
