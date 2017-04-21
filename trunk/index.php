@@ -32,7 +32,7 @@ defined("CURRENT_CONTROLLER_PATH") or define("CURRENT_CONTROLLER_PATH",CONTROLLE
 //定义当前视图文件所在路径
 defined("CURRENT_VIEW_PATH") or define("CURRENT_VIEW_PATH",VIEW_PATH.$p.DS.$c.DS);
 
-
+//aaaaaa
 //2.引入控制器类，创建控制器对象
 //require CURRENT_CONTROLLER_PATH."{$c}Controller.class.php";
 $class_name = $c.'Controller';
